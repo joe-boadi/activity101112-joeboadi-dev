@@ -10,11 +10,12 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <div className='w-full'>
-     <div className="flex w-full items-center justify-between">
-        <h1 className={`${lusitana.className} text-2xl`}>Customers</h1>
-      </div>
-      <Suspense fallback={<CustomersTable customers={[]} />}>
-      </Suspense>
-  </div>
+  return <main className='w-full'>
+            <div className="flex w-full items-center justify-between">
+                <h1 className={`${lusitana.className} text-2xl`}>Customers</h1>
+            </div>
+              <Suspense>
+                <CustomersTable customers={[]}/>
+              </Suspense>
+        </main>
 }
