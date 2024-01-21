@@ -1,27 +1,28 @@
 import { Metadata } from 'next';
-import Customer from '@/app/ui/customers/table'
 import { lusitana } from '@/app/ui/fonts';
 import CustomersTable from '@/app/ui/customers/table';
 import { Suspense } from 'react';
-import Table from '@/app/ui/customers/table';
-import { customers } from '@/app/lib/placeholder-data';
-import CustomersTableSkeleton from '@/app/ui/skeletons';
-import { custom } from 'zod';
-import { SearchParamsContext } from 'next/dist/shared/lib/hooks-client-context.shared-runtime';
 import { fetchFilteredCustomers } from '@/app/lib/data';
+import CustomersTableSkeleton from '@/app/ui/skeletons';
+// import { custom } from 'zod';
+// import Table from '@/app/ui/customers/table';
+// import { customers } from '@/app/lib/placeholder-data';
+// import Customer from '@/app/ui/customers/table'
+// import { SearchParamsContext } from 'next/dist/shared/lib/hooks-client-context.shared-runtime';
+
 
 export const metadata: Metadata = {
   title: 'Customers',
 };
 
 export default async function Page({
-  SearchParams,
+  searchParams,
 }:{
-  SearchParams?:{
+  searchParams?:{
     query?: string;
   }
 }) {
-    const query = SearchParams?.query || '';
+    const query = searchParams?.query || '';
     const customers = (await fetchFilteredCustomers(query))
 
   return (
