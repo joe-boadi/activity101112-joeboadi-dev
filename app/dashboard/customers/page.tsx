@@ -7,12 +7,23 @@ import Table from '@/app/ui/customers/table';
 import { customers } from '@/app/lib/placeholder-data';
 import CustomersTableSkeleton from '@/app/ui/skeletons';
 import { custom } from 'zod';
+import { SearchParamsContext } from 'next/dist/shared/lib/hooks-client-context.shared-runtime';
+import { fetchFilteredCustomers } from '@/app/lib/data';
 
 export const metadata: Metadata = {
   title: 'Customers',
 };
 
-export default function Page() {
+export default async function Page({
+  SearchParams,
+}:{
+  SearchParams?:{
+    query?: string;
+  }
+}) {
+    const query = SearchParams?.query || '';
+    const customers = (await fetchFilteredCustomers(query))
+
   return (
     <main>
       <div className='w-full'>
