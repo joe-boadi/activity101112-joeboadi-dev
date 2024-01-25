@@ -70,6 +70,7 @@ Contributions are welcome! Please follow these guidelines:
 4. Push to the branch: `git push origin feature/new-feature`
 5. Submit a pull request
 6. NOTE: Project will be archived in a later date.
+<hr> <br>
 
 ## License
 
