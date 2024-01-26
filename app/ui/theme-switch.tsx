@@ -3,7 +3,11 @@
 import React, { useEffect, useState } from 'react';
 
 const ThemeSwitch = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  
+  // Check if window is defined
+  const isBrowser = typeof window !== 'undefined'
+
+  const [theme, setTheme] = useState(isBrowser ? localStorage.getItem('theme') || 'light':"cupcake");
 
   const toggleTheme = () => {
     if (theme === 'light') {
