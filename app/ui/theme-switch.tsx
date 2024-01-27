@@ -7,7 +7,7 @@ const ThemeSwitch = () => {
   // Check if window is defined
   const isBrowser = typeof window !== 'undefined'
 
-  const [theme, setTheme] = useState(isBrowser ? localStorage.getItem('theme') || 'light':"light");
+  const [theme, setTheme] = useState(isBrowser ? localStorage.getItem('theme') || 'light':"dark");
 
   const toggleTheme = () => {
     if (theme === 'light') {
