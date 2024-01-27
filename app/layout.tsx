@@ -11,7 +11,6 @@ export default function RootLayout({
     <html data-theme="light" lang="en">
       <body className={`${inter.className} relative antialiased`}>
         {children}
-        <ThemeSwitch />
       </body>
     </html>
   );
