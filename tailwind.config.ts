@@ -35,7 +35,7 @@ const config: Config = {
           ...require('daisyui/src/theming/themes')['dark'],
         },
         light: {
-          ...require('daisyui/src/theming/themes')['winter'],
+          ...require('daisyui/src/theming/themes')['light'],
         },
       },
     ],
