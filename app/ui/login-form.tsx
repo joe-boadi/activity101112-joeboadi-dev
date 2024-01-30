@@ -10,11 +10,13 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 import { useFormState, useFormStatus } from 'react-dom';
 import { authenticate } from '@/app/lib/actions';
+import Link from 'next/link';
 
 export default function LoginForm() {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
 
   return (
+    <>
     <form  action={dispatch} className="space-y-3">
       <div className="flex-1 rounded-lg bg-primary-content/30 px-6 pb-4 pt-8">
         <h1 className={`${lusitana.className} mb-3 text-2xl`}>
@@ -76,6 +78,15 @@ export default function LoginForm() {
         </div>
       </div>
     </form>
+    
+
+
+      <div  className='pt-8 flex items-center justify-center text-sm text-base-content hover:text-base-content'>
+      <Link href='/'>
+        Go to Homepage
+      </Link>
+    </div>
+  </>
   );
 }
 

@@ -12,11 +12,6 @@ export default function LoginPage() {
           </div>
         </div>
         <LoginForm />
-        <div  className='pt-8 flex items-center justify-center text-sm text-base-content hover:text-base-content'>
-          <Link href='/' passHref>
-           Go to Homepage
-          </Link>
-        </div>
       </div>
     </main>
   );

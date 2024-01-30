@@ -3,12 +3,7 @@ import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { lusitana } from "@/app/ui/fonts";
-import { Metadata } from 'next';
 import HeroImage from '@/app/ui/hero-image';
-
-export const metadata: Metadata = {
-  title: 'Dashboard',
-};
 
 export default function Page() {
   return (
