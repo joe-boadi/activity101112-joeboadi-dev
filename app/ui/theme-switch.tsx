@@ -26,7 +26,7 @@ const ThemeSwitch = () => {
   return (
     <div>
       <label
-        className={`absolute right-12 top-[10.5rem] flex w-[90px] cursor-pointer gap-0 md:bottom-6 md:right-14 md:top-auto md:w-[100px] md:gap-2`}
+        className={`absolute left-11 top-[12rem] bottom-12 flex w-[90px] cursor-pointer gap-0 md:bottom-20 md:left-10 md:top-auto md:w-[100px] md:gap-2`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
