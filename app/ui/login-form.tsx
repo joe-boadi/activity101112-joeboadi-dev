@@ -1,11 +1,7 @@
 'use client';
 
 import { lusitana } from '@/app/ui/fonts';
-import {
-  AtSymbolIcon,
-  KeyIcon,
-  ExclamationCircleIcon,
-} from '@heroicons/react/24/outline';
+import { AtSymbolIcon, KeyIcon, ExclamationCircleIcon} from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 import { useFormState, useFormStatus } from 'react-dom';
@@ -78,10 +74,7 @@ export default function LoginForm() {
         </div>
       </div>
     </form>
-    
-
-
-      <div  className='pt-8 flex items-center justify-center text-sm text-base-content hover:text-base-content'>
+    <div  className='pt-8 flex items-center justify-center text-sm text-base-content hover:text-base-content'>
       <Link href='/'>
         Go to Homepage
       </Link>

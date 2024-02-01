@@ -12,9 +12,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
-          <ClientThemeWrapper>
+          <ClientThemeWrapper>    
             {children}
-            <ThemeSwitch />
+            <ThemeSwitch/>
           </ClientThemeWrapper>
         </ThemeProvider>
       </body>
