@@ -3,7 +3,7 @@ import { lusitana } from '@/app/ui/fonts';
 import CustomersTable from '@/app/ui/customers/table';
 import { Suspense } from 'react';
 import { fetchFilteredCustomers } from '@/app/lib/data';
-import CustomersTableSkeleton from '@/app/ui/skeletons';
+import { TableRowSkeleton } from '@/app/ui/skeletons';
 
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default async function Page({
         <div className='flex w-full items-center justify-between'>
             <h1 className={ `${lusitana.className} text-2xl`}></h1>
         </div>
-        <Suspense key={query + customers} fallback={<CustomersTableSkeleton/>}>
+        <Suspense key={query + customers} fallback={<TableRowSkeleton/>}>
           <CustomersTable customers={customers}/>
         </Suspense>
       </div>
