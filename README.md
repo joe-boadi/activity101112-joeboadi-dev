@@ -1,3 +1,5 @@
+![Static Badge](https://img.shields.io/badge/Status-Graded-green)
+
 # Invoicing App
 
 This Invoicing App is a full-stack web application developed as part of the assignment project for[The PAD Forum](https://github.com/the-pad-forum) Bootcamp Cohort 1. It allows users to manage and generate invoices efficiently.
